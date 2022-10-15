@@ -1,2 +1,1 @@
-# godatastructures
-Go Data Structures 
+# Go Data Structures 
