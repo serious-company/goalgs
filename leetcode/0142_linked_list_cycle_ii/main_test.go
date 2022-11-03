@@ -18,10 +18,10 @@ func Test(t *testing.T) {
 	}
 	node.Next.Next = node
 
-	tests := []struct {
-		name     string
-		args     args
-		expected *ListNode
+	testcases := []struct {
+		name string
+		args args
+		want *ListNode
 	}{
 		{
 			name: "Test-1",
@@ -40,19 +40,19 @@ func Test(t *testing.T) {
 					},
 				},
 			},
-			expected: node,
+			want: node,
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := detectCycle(tt.args.head); got != tt.expected {
-				t.Errorf("detectCycle() = %v, expected %v", got, tt.expected)
+	for _, tc := range testcases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := detectCycle(tc.args.head); got != tc.want {
+				t.Errorf("detectCycle() = %v, want %v", got, tc.want)
 			}
 		})
 
-		t.Run(tt.name, func(t *testing.T) {
-			if got := detectCycle2(tt.args.head); got != tt.expected {
-				t.Errorf("detectCycle2() = %v, expected %v", got, tt.expected)
+		t.Run(tc.name, func(t *testing.T) {
+			if got := detectCycle2(tc.args.head); got != tc.want {
+				t.Errorf("detectCycle2() = %v, want %v", got, tc.want)
 			}
 		})
 	}

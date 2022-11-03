@@ -19,10 +19,10 @@ func Test(t *testing.T) {
 	}
 	node.Next.Next = node
 
-	tests := []struct {
-		name     string
-		args     args
-		expected *ListNode
+	testcases := []struct {
+		name string
+		args args
+		want *ListNode
 	}{
 		{
 			name: "Test-1",
@@ -41,18 +41,18 @@ func Test(t *testing.T) {
 					},
 				},
 			},
-			expected: node,
+			want: node,
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := reverseList(tt.args.head); reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("reverseList() = %v, expected %v", got, tt.expected)
+	for _, tc := range testcases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := reverseList(tc.args.head); reflect.DeepEqual(got, tc.want) {
+				t.Errorf("reverseList() = %v, want %v", got, tc.want)
 			}
 		})
 
-		if got := reverseList2(tt.args.head); reflect.DeepEqual(got, tt.expected) {
-			t.Errorf("reverseList2() = %v, expected %v", got, tt.expected)
+		if got := reverseList2(tc.args.head); reflect.DeepEqual(got, tc.want) {
+			t.Errorf("reverseList2() = %v, want %v", got, tc.want)
 		}
 	}
 }

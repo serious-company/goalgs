@@ -8,23 +8,23 @@ func Test(t *testing.T) {
 	type args struct {
 		nums []int
 	}
-	tests := []struct {
-		name     string
-		args     args
-		expected int
+	testcases := []struct {
+		name string
+		args args
+		want int
 	}{
 		{
 			name: "Test-1",
 			args: args{
 				nums: []int{1, 7, 3, 6, 5, 6},
 			},
-			expected: 3,
+			want: 3,
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := pivotIndex(tt.args.nums); got != tt.expected {
-				t.Errorf("pivotIndex() = %v, expected %v", got, tt.expected)
+	for _, tc := range testcases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := pivotIndex(tc.args.nums); got != tc.want {
+				t.Errorf("pivotIndex() = %v, want %v", got, tc.want)
 			}
 		})
 	}

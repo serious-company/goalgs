@@ -9,10 +9,10 @@ func Test(t *testing.T) {
 		nums   []int
 		target int
 	}
-	tests := []struct {
-		name     string
-		args     args
-		expected int
+	testcases := []struct {
+		name string
+		args args
+		want int
 	}{
 		{
 			name: "Test-1",
@@ -20,13 +20,13 @@ func Test(t *testing.T) {
 				nums:   []int{1, 3, 5, 6},
 				target: 5,
 			},
-			expected: 2,
+			want: 2,
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := searchInsert(tt.args.nums, tt.args.target); got != tt.expected {
-				t.Errorf("searchInsert() = %v, expected %v", got, tt.expected)
+	for _, tc := range testcases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := searchInsert(tc.args.nums, tc.args.target); got != tc.want {
+				t.Errorf("searchInsert() = %v, want %v", got, tc.want)
 			}
 		})
 	}

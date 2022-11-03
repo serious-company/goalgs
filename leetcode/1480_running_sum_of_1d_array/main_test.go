@@ -9,23 +9,23 @@ func Test(t *testing.T) {
 	type args struct {
 		nums []int
 	}
-	tests := []struct {
-		name     string
-		args     args
-		expected []int
+	testcases := []struct {
+		name string
+		args args
+		want []int
 	}{
 		{
 			name: "Test-1",
 			args: args{
 				nums: []int{1, 2, 3, 4},
 			},
-			expected: []int{1, 3, 6, 10},
+			want: []int{1, 3, 6, 10},
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := runningSum(tt.args.nums); !reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("runningSum() = %v, expected %v", got, tt.expected)
+	for _, tc := range testcases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := runningSum(tc.args.nums); !reflect.DeepEqual(got, tc.want) {
+				t.Errorf("runningSum() = %v, want %v", got, tc.want)
 			}
 		})
 	}

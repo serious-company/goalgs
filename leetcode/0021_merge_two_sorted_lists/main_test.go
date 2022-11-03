@@ -6,10 +6,10 @@ import (
 )
 
 func Test(t *testing.T) {
-	tests := []struct {
-		name     string
-		args     []*ListNode
-		expected *ListNode
+	testcases := []struct {
+		name string
+		args []*ListNode
+		want *ListNode
 	}{
 		{
 			name: "Test-1",
@@ -33,7 +33,7 @@ func Test(t *testing.T) {
 					},
 				},
 			},
-			expected: &ListNode{
+			want: &ListNode{
 				Val: 1,
 				Next: &ListNode{
 					Val: 1,
@@ -53,10 +53,10 @@ func Test(t *testing.T) {
 			},
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := mergeTwoLists(tt.args[0], tt.args[1]); !reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("mergeTwoLists() = %v, expected %v", got, tt.expected)
+	for _, tc := range testcases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := mergeTwoLists(tc.args[0], tc.args[1]); !reflect.DeepEqual(got, tc.want) {
+				t.Errorf("mergeTwoLists() = %v, want %v", got, tc.want)
 			}
 		})
 	}
