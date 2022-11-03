@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestConstructor(t *testing.T) {
+func Test(t *testing.T) {
 	constructor := MyLinkedList{
 		Head: &Node{},
 		Size: 0,

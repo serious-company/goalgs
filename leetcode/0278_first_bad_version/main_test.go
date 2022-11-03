@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_firstBadVersion(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		n int
 	}

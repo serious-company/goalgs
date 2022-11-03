@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_reverseList(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		head *ListNode
 	}

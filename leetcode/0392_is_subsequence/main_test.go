@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_isIsomorphic(t *testing.T) {
+func Test(t *testing.T) {
 	tests := []struct {
 		name     string
 		args     []string

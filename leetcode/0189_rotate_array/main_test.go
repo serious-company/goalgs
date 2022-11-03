@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_rotate(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		nums []int
 		k    int

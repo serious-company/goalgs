@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_isSubsequence(t *testing.T) {
+func Test(t *testing.T) {
 	tests := []struct {
 		name     string
 		args     []string

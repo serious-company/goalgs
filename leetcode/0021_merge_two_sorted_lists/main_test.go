@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_mergeTwoLists(t *testing.T) {
+func Test(t *testing.T) {
 	tests := []struct {
 		name     string
 		args     []*ListNode

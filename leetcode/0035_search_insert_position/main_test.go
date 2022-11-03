@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test_searchInsert(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		nums   []int
 		target int

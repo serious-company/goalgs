@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_sortedSquares(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		nums []int
 	}

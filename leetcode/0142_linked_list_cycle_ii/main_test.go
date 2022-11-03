@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test_detectCycle(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		head *ListNode
 	}

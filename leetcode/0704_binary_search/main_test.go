@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test_binarySearch(t *testing.T) {
+func Test(t *testing.T) {
 	type args struct {
 		nums   []int
 		target int
