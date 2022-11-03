@@ -1,1 +1,3 @@
-# Go Data Structures 
+# Golang Algorithms
+
+Inspired by https://github.com/TomorrowWu/golang-algorithms
