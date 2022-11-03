@@ -24,7 +24,7 @@ func Test_detectCycle(t *testing.T) {
 		expected *ListNode
 	}{
 		{
-			name: "detectCycle--1",
+			name: "Test-1",
 			args: args{
 				head: &ListNode{
 					Val: 0,
